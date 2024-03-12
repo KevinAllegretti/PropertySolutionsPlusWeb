@@ -1,0 +1,170 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Example font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+header {
+    background: #005f73;
+    display: block; /* Change to block to allow for standard flow */
+    text-align: center; /* This will center the logo container */
+    position: relative; /* Removed fixed to allow for natural document flow */
+    z-index: 1000;
+}
+
+.logo-container {
+    padding: 5px 0;
+}
+
+nav {
+    display: flex; /* Enables flexbox for the navigation */
+    justify-content: center; /* Center navigation items horizontally */
+    align-items: center; /* Center navigation items vertically */
+    height: 100%; /* Match the height of the header */
+    margin-left: 20px; /* Optional: Adds some space between the logo and navigation */
+}
+
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block; /* Center the inline-block element with text-align from parent */
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #2b7a78;
+}
+
+/* Hero Section */
+.hero {
+    padding: 10px;
+    color: #005f73;
+}
+#logo {
+    height: 80px; /* Maintains aspect ratio */
+    width: 80px; /* Adjust width as needed to scale the logo */
+    /* Remove margin if not needed, or adjust as per your design */
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.hero p {
+    margin-bottom: 40px;
+    font-size: 1.2em;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #ffddd2; /* Soft color for CTA button */
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero .cta-button:hover,
+.hero .cta-button:focus {
+    background-color: #e29578;
+}
+
+/* Other sections and responsive design styles omitted for brevity */
+
+/* Footer */
+footer {
+    background: #003d5b;
+    color: #edf6f9;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-icons {
+    list-style: none;
+}
+
+footer .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer .social-icons li a {
+    color: #edf6f9;
+    text-decoration: none;
+    font-size: 1.5em; /* Larger icons */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Additional responsive styles */
+}
+
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.contact-info p {
+    margin-bottom: 1em;
+}
+
+.contact-info a {
+    color: #005f73; /* Use the brand's color */
+    text-decoration: none;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto; /* Centering the content */
+    padding: 20px; /* Padding inside the container */
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Stack flex items vertically */
+    align-items: center; /* Center align the flex items horizontally */
+}
